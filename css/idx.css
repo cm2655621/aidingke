@@ -1,0 +1,41 @@
+/* CSS Document */
+*{  
+    -webkit-touch-callout:none;  /*系统默认菜单被禁用*/  
+    -webkit-user-select:none; /*webkit浏览器*/  
+    -khtml-user-select:none; /*早期浏览器*/  
+    -moz-user-select:none;/*火狐*/  
+    -ms-user-select:none; /*IE10*/  
+	user-select:none;  
+	margin: 0;
+}
+	
+/* @font-face {
+	font-family: "F002";
+	src: url('../fonts/HARLOWSI.TTF');
+}
+@font-face {
+	font-family: "F001";
+	src: url('../fonts/OCRAEXT.TTF');
+}
+@font-face {
+	font-family: "F004";
+	src: url('../fonts/MTCORSVA.TTF');
+}
+@font-face {
+	font-family: "F003";
+	src: url('../fonts/Segoe Script.TTF');
+} */
+*[hidden] { display: none; }
+
+#myCanvas,#myCanvas_tmp,#myCanvas_type1,#myCanvas_type4,#myCanvas_type3,#myCanvas_tatoo,#myCanvas_tatooShade,#myCanvas_font,#myCanvas_ssd{
+
+	position: absolute;
+	/*
+	border:1px solid #d3d3d3;
+	*/
+	/* left: 0;
+	right: 0; */
+	margin: 90px;
+}
+
+

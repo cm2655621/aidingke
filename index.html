@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/cusPC.css" />
+		<link rel="stylesheet" href="css/idx.css" />
+	</head>
+	<body>
+		<div class="contp">
+		    <!--------------------------遮罩---------------------------------------------------->
+		    <section id="shade"></section>
+		    <!--预览图-->
+		    <section id="photoshop">
+		        <div class="shadeP"></div>
+		        <section class="ps-head"></section>
+		        <section class="ps-img">
+		            <div class="showA">效果预览<a class="button" id="titleGoBack" href="javascript:closeA()"></a></div>
+		            <ul id="img-panel"></ul>
+		            <div class="ps-page">
+		                <div class="confirmph"><span></span><a>确认</a></div>
+		            </div>
+		        </section>
+		    </section>
+		    <!--设计灵感-------------------------------------------->
+		    <div class="saveSh">
+		        <div class="shadeP"></div>
+		        <div class="saveSh1">
+		            <div class="showA">保存设计作品<a class="button" href="javascript:closeA()"></a></div>
+		            <div class="contentText">
+		                <div id="sasp" class="shoeSh fl"></div>
+		                <div class="shoeText fl">
+		                    <div>作品名称:</div>
+		                    <input class="shnae" type="text">
+		                    <div>设计理念/灵感:</div>
+		                    <textarea name="" id="" cols="30" rows="10"></textarea>
+		                    <div class="tips1">（100字以内）</div>
+		                </div>
+		            </div>
+		            <div class="ps-page sawe1">
+		                <div class="save2" onclick="idxDoSave2()"><span></span>保存</div>
+		                <div class="saveCar" onclick="idxinitSizeOpt()"><span></span>保存</div>
+		            </div>
+		        </div>
+		    </div>
+		    <!--弹窗------------------------------------------------------>
+		    <div class="confirmSh">
+		        <div class="shadeP"></div>
+		        <div class="confirmSh1">
+		            <div class="showA">信息提示<a class="button" href="javascript:closeA()"></a></div>
+		            <div class="coninfo">
+		                要不要买下来呢，帮好友出出注意吧
+		            </div>
+		            <div class="ps-page ps-pagec">
+		                <div class="addC" onclick="idxinitSizeOpt()">加入购物车</div>
+		                <div class="release" onclick="release()">发布商品</div>
+		                <div class="conf">确定</div>
+		            </div>
+		            <div id="ps-pageA">
+		                <div class="addCA">去结账</div>
+		                <div class="adindex">再逛逛</div>
+		            </div>
+		        </div>
+		    </div>
+		    <!--选尺码------------------------------------------------------------------>
+		    <div class="shoeSi">
+		        <div class="shadeP"></div>
+		        <div class="shoeSi1">
+		            <div class="showA sha1">尺码<a class="button" href="javascript:closeA()"></a><span>在加入购物袋之前请先输入并保存你的尺码</span></div>
+		            <div class="shSC">
+		                <div class="shscd">
+		                    <span>尺码</span>
+		                    <select name="请选择尺寸" id="sele1" value="请选择尺寸"></select>
+		                    <span>数量</span>
+		                    <input class="inp2" type="text" value="1" maxlength="2" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();">
+		                    <span class="spa1">
+		                        <a class="add1"></a>
+		                    </span>
+		                    <span class="spa2">
+		                        <a class="add2"></a>
+		                    </span>
+		                    <span class="del1">X 删除</span>
+		                </div>
+		            </div>
+		            <div class="ps-page">
+		                <!-- <div class="addSize" style="float:left">+添加新尺码</div> -->
+		                <div class="addToCarA" style="width: 145px"><span></span>保存加入购物车</div>
+		                <div class="addToCar" style="width: 145px"><span></span>加入购物车</div>
+		            </div>
+		        </div>
+		    </div>
+		    <!--------------------------商品页面 ---------------------------------------------------->
+		    <div class="spacePC fl">
+		        <div class="sptext addsp" onclick="selectProA()">选择产品<span class="borsp">——</span></div>
+		        <div class="selectPro">
+		            <div class="sptext"></div>
+		            <div class="spselect">
+		                <ul></ul>
+		            </div>
+		            <div class="prevsp">上一页</div>
+		            <div class="nextsp">下一页</div>
+		            <div class="pupsp">
+		                <div class="imgsp">
+		                    <img src="" alt=""></div>
+		                <div class="textsp">
+		                    <span class="tspa"></span>
+		                    <span class="tspb"></span>
+		                    <span class="tspc">评价：<a></a></span>
+		                    <span class="tspd">已出售：<a></a></span>
+		                </div>
+		            </div>
+		        </div>
+		        <div id="myCanvasDiv">
+		            <canvas id="myCanvas_tmp">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas_type3">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas_tatoo">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas_tatooShade">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas_ssd">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas_type1">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas_type4">Your browser does not support the HTML5 canvas tag.</canvas>
+		            <canvas id="myCanvas_font">Your browser does not support the HTML5 canvas tag.</canvas>
+		        </div>
+		    </div>
+		    <!--------------------------控制页面 ---------------------------------------------------->
+		    <!--右侧控制区域-->
+		    <div class="commandPC fl">
+		       
+		        <!--涂鸦图片区域-->
+		        <div class="graffInfo">
+		            <div class="titPC">图片<span></span></div>
+		            <!--左侧按钮-->
+		            <div class="ctrPC fl">
+		                <div id="J_StepSwitcher" class="step-switcher">
+		                    <ul class="scroll-wrap" id="partBar"></ul>
+		                </div>
+		            </div>
+		            <!--右侧图片区-->
+		            <div class="picPC fl">
+		                <div class="content-wrap"></div>
+		                <div class="save1 ft-btn-save" onclick="idxGoShowPreview()">保存</div>
+		            </div>
+		        </div>
+		    </div>
+		
+		    <!--------------------------控制按钮 ---------------------------------------------------->
+		    <div class="fullscreen"><span class="fspan">全屏</span></div>
+		    <div class="enlarge" onclick="idxChangeCanvasSize(800)"><span class="espan">放大</span></div>
+		    <div class="narrow" onclick="idxChangeCanvasSize(520)"><span class="nspan">缩小</span></div>
+		    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAzMTk0MV8yNjAyXzQwMDgyMTYzMTZfMl8" target="_blank">
+		        <div class="qqgray"><span class="qspan">客服</span></div>
+		    </a>
+		    <div class="shareA"><span class="qspan">分享</span></div>
+		    <div class="turnA" onclick="idxChangeLayer('')"><span class="qspan">旋转</span></div>
+		    <div class="eyeA" onclick="idxGoShowPreview()"><span class="qspan">预览</span></div>
+		    <div class="resetA" onclick="loadModelFromUrl()"><span class="qspan">重置</span></div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    	<script type="text/javascript" src="js/pub.js"></script>
+    	<script type="text/javascript" src="js/global.js"></script>
+
+		<script src="js/base64.js"></script>
+	    <script src="js/rem.js"></script>
+	    <script src="js/plugins.js"></script>
+	    <script src="js/common.js"></script>    
+	    <script type="text/javascript" src="js/creatLoginFram.js"></script>
+	    <script src="js/addlf.js"></script>
+	    <script src='js/ModelCtl.js'></script>
+	    <script src='js/idxApi.js'></script>
+	    <script src='js/init.js'></script>
+	    <script src='js/goodsdetailcontent.js'></script>
+	
+	    <script src="js/customizingflash.js" type="text/javascript"></script>
+	    <script src="js/idxevaluate.js" type="text/javascript"></script>
+	    <script src="js/TransactionRecord.js" type="text/javascript"></script>
+<script type="text/javascript">
+        var productid = "10001113";
+        var workid = "";
+        var productcode = "AA10301005";
+        var detailUrl = '/Partial/DetailShow';
+
+        $(function () {
+
+            //设计灵感
+            customizingflash.loadProductAfflatus(productid, productcode);
+
+
+        });
+
+
+
+        $(function () {
+            $("#divIdeas").hide();
+            Initialize("", "AA10301005", "2", "", "");
+        });
+    </script>
+
+	</body>
+</html>
